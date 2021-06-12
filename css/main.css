@@ -1,18 +1,14 @@
 /* Top banner */
 .top {
-  color: #828282;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
-.top-container {
-  max-width: 1180px;
-  padding: 0 20px;
-  margin: 0 auto;
+.top .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .domain {
-  padding: 5px 12px;
+  color: #828282;
   font-size: 15px;
   font-weight: 300;
   border-left: 1px solid rgba(0, 0, 0, 0.08);
@@ -23,14 +19,13 @@
   align-items: center;
 }
 .contact .phone {
-  padding: 5px 12px;
+  color: rgba(0, 0, 0, 0.6);
   font-size: 13px;
   font-weight: 400;
   border-left: 1px solid rgba(0, 0, 0, 0.08);
   border-right: 1px solid rgba(0, 0, 0, 0.08);
 }
 .contact .social {
-  padding: 5px 12px;
   border-right: 1px solid rgba(0, 0, 0, 0.08);
 }
 .contact .social ul {
@@ -39,18 +34,20 @@
 }
 .contact .social ul a {
   font-size: 14px;
-  color: #000;
+  color: rgba(0, 0, 0, 0.9);
   padding: 7px;
+}
+.domain,
+.phone,
+.social {
+  padding: 5px 12px;
 }
 
 /* Header */
 header {
   padding: 22px 0;
 }
-.header-container {
-  max-width: 1180px;
-  padding: 0 20px;
-  margin: 0 auto;
+header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -74,6 +71,9 @@ header h1 {
   font-weight: 300;
   color: rgba(0, 0, 0, 0.9);
   padding: 0 15px;
+}
+.menu ul li.active a {
+  font-weight: 400;
 }
 .btn-container {
   margin-left: 5px;
