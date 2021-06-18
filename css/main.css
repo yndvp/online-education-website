@@ -59,7 +59,6 @@ header h1 {
 .flex-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .menu ul {
   display: flex;
@@ -84,4 +83,82 @@ header h1 {
   font-size: 14px;
   font-weight: 300;
   padding: 7px 10px;
+  transition: box-shadow 0.3s;
+}
+.btn-container a:hover {
+  box-shadow: 3px 5px 10px #828282d3;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 630px;
+  overflow: hidden;
+}
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 1.5s;
+}
+.slide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.slide .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 750px;
+  color: #fff;
+  text-align: center;
+}
+.slide .content h2 {
+  font-size: 40px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+.slide .content p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.slide .content p a {
+  color: rgba(255, 255, 255, 0.5);
+}
+.slide .content a.btn {
+  display: inline-block;
+  color: #fff;
+  background: var(--primary-color);
+  padding: 18px 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 30px;
+}
+.navigation {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.navigation-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  margin: 0 5px;
+}
+.navigation-btn.active {
+  background: rgba(255, 255, 255, 0.7);
 }
