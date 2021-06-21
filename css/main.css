@@ -234,3 +234,43 @@ header h1 {
   position: relative;
   top: 25px;
 }
+
+/* Counter Section */
+.counter {
+  position: relative;
+  background: url("../images/img_bg_4.jpg") no-repeat;
+  background-size: cover;
+  padding: 120px 0;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.counter .container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+}
+.counter .container div {
+  margin: 0 50px;
+  z-index: 999;
+}
+.counter .container i {
+  font-size: 45px;
+  margin-bottom: 5px;
+}
+.counter .container .number {
+  font-size: 44px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.counter .container p:not(.number) {
+  font-size: 16px;
+  font-weight: 400;
+}
