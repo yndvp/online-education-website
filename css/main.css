@@ -195,7 +195,7 @@ header h1 {
   margin-bottom: 30px;
   transition: 0.3s;
 }
-.category span:hover {
+.category:hover span {
   color: #fff;
   background-color: #2e6ddf;
 }
