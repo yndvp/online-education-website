@@ -262,7 +262,7 @@ header h1 {
   background: rgba(0, 0, 0, 0);
   transition: 0.5s;
 }
-.course:hover .course-overlay {
+.course a:hover .course-overlay {
   background: rgba(0, 0, 0, 0.5);
 }
 .course a img {
@@ -291,3 +291,5 @@ header h1 {
   display: inline-block;
   margin-bottom: 5px;
 }
+
+/* Testimonials Section */
