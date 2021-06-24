@@ -345,6 +345,7 @@ header h1 {
 }
 .testimonial {
   width: 33.33%;
+  transition: 1.5s;
 }
 .testimonial span {
   display: inline-block;
@@ -374,4 +375,22 @@ header h1 {
 .testimonial .quote {
   max-width: 680px;
   margin: 0 auto;
+  font-size: 17.5px;
+}
+
+.testimonials .navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.testimonials .navigation-btn {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.testimonials .navigation-btn.active {
+  background: #fff;
 }
