@@ -294,6 +294,7 @@ header .flex-container {
 
 /* Testimonials Section */
 .testimonials {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -301,6 +302,17 @@ header .flex-container {
   background-image: url(../images/school.jpg);
   overflow: hidden;
   text-align: center;
+  z-index: -1;
+}
+.testimonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(31, 95, 139, 0.7);
+  z-index: 0;
 }
 /* .testimonials .overlay {
   background: rgba(31, 95, 139, 0.7);
@@ -315,6 +327,7 @@ header .flex-container {
   margin-bottom: 45px;
   line-height: 1.5;
   text-transform: uppercase;
+  z-index: 1;
 }
 .testimonials h3 span {
   position: relative;
@@ -341,6 +354,7 @@ header .flex-container {
 .testimonial-container {
   display: flex;
   width: 300%;
+  z-index: 1;
 }
 .testimonial {
   width: 33.33%;
@@ -381,6 +395,7 @@ header .flex-container {
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  z-index: 1;
 }
 .testimonials .navigation-btn {
   width: 10px;
