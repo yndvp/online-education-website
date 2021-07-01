@@ -493,3 +493,52 @@ header .flex-container {
   font-weight: 400;
   margin-bottom: 20px;
 }
+
+/* Plans Section */
+.plans {
+  background: #e8e8e8;
+}
+.plans-content {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.plan {
+  width: 370px;
+  background: #fff;
+}
+.plan h4 {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 30px 0;
+}
+.plan .price {
+  background: #f7f7f7;
+}
+.plan .price .number {
+  font-size: 45px;
+  font-weight: 400;
+}
+.plan .price .dollar-sign {
+  font-size: 20px;
+  vertical-align: super;
+}
+.plan .price .text {
+  color: #8b909d;
+  font-size: 16px;
+}
+.plan ul {
+  padding: 30px 0;
+}
+.plan ul li {
+  color: #8b909d;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.plan .btn-transparent {
+  display: inline-block;
+  padding: 16px 75px;
+  margin-bottom: 30px;
+}
