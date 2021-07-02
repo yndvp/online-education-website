@@ -542,3 +542,59 @@ header .flex-container {
   padding: 16px 75px;
   margin-bottom: 30px;
 }
+
+/* Day counter Section */
+.day-counter {
+  position: relative;
+  color: #fff;
+  background: url(../images/img_bg_2.jpg) no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.day-counter h3,
+.day-counter .name {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.day-counter h3 {
+  font-size: 30px;
+}
+.day-counter .name {
+  font-size: 24px;
+}
+.day-counter .flex-container {
+  display: flex;
+  justify-content: center;
+  margin: 45px 0;
+}
+.day-counter .flex-container div {
+  width: 115px;
+  height: 115px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 10px 21px 0;
+  margin: 0 5px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.day-counter .flex-container div span {
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+.day-counter .phrase {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.day-counter .btn-transparent {
+  display: inline-block;
+  color: #fff;
+  letter-spacing: 2px;
+  border-color: #fff;
+  padding: 18px 36px;
+}
