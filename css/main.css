@@ -1,3 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&family=Source+Sans+Pro:wght@300;400;700&display=swap");
+
+/* font-family: 'Roboto Slab', serif;
+font-family: 'Source Sans Pro', sans-serif; */
+
+:root {
+  --primary-color: #2d6cdf;
+  --gray-color: #828282;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  line-height: 1.7;
+  font-family: "Source Sans Pro", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 /* Top banner */
 .top {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -299,10 +325,22 @@ header .flex-container {
   flex-direction: column;
   width: 100%;
   color: #fff;
-  background: url(../images/img_bg_4.jpg) no-repeat;
-  background-size: cover;
+  background: url(../images/school.jpg);
   overflow: hidden;
   text-align: center;
+}
+.testimonials::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(31, 95, 139, 0.7);
+  z-index: 0;
+}
+.testimonials > * {
+  z-index: 10;
 }
 .testimonials h3 {
   display: inline-block;
@@ -551,6 +589,20 @@ header .flex-container {
   background-size: cover;
   text-align: center;
 }
+.day-counter::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.day-counter > * {
+  z-index: 10;
+  position: relative;
+}
 .day-counter h3,
 .day-counter .name {
   font-family: "Roboto Slab", serif;
@@ -574,6 +626,7 @@ header .flex-container {
   height: 115px;
   border: 2px solid #fff;
   border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
   padding: 10px 21px 0;
   margin: 0 5px;
   font-size: 12px;
@@ -597,4 +650,8 @@ header .flex-container {
   letter-spacing: 2px;
   border-color: #fff;
   padding: 18px 36px;
+}
+.day-counter .btn-transparent:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
 }
