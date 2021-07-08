@@ -114,6 +114,9 @@ header .flex-container {
 .btn-container a:hover {
   box-shadow: 3px 5px 10px #828282d3;
 }
+.toggleBtn {
+  display: none;
+}
 
 /* Slider */
 .slider {
@@ -732,4 +735,51 @@ footer div h4 {
 footer div a {
   color: var(--gray-color);
   font-size: 15px;
+}
+
+/* Toggle */
+.active {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  header .toggleBtn {
+    display: block;
+  }
+  header .flex-container {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: rgba(0, 0, 0);
+    padding: 60px 30px;
+    z-index: 10;
+  }
+  header .flex-container a {
+    color: #fff !important;
+  }
+  header .flex-container .menu ul {
+    display: block;
+  }
+  header .flex-container .menu ul li {
+    margin-bottom: 7px;
+  }
+  header .flex-container .menu ul a {
+    padding: 0;
+  }
+  header .flex-container .btn-container {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+  header .flex-container .btn-container {
+    display: flex;
+    flex-direction: column;
+  }
+  header .flex-container .btn-container a {
+    padding: 5px 10px;
+    margin-bottom: 8px;
+  }
 }
