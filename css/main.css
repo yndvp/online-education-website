@@ -743,6 +743,17 @@ footer div a {
 }
 
 /* Responsive */
+@media (max-width: 1240px) {
+  .categories-content {
+    justify-content: center;
+  }
+}
+@media (max-width: 1120px) {
+  .categories-content {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+  }
+}
 @media (max-width: 900px) {
   header .toggleBtn {
     display: block;
@@ -781,5 +792,10 @@ footer div a {
   header .flex-container .btn-container a {
     padding: 5px 10px;
     margin-bottom: 8px;
+  }
+}
+@media (max-width: 500px) {
+  .categories-content {
+    grid-template-columns: 1fr;
   }
 }
