@@ -753,8 +753,18 @@ footer div a {
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
   }
+  /* Counter section */
+  .counter .container {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-row-gap: 50px;
+  }
+  .counter .container div {
+    margin: 0;
+  }
 }
 @media (max-width: 900px) {
+  /* Header */
   header .toggleBtn {
     display: block;
   }
@@ -794,8 +804,13 @@ footer div a {
     margin-bottom: 8px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .categories-content {
     grid-template-columns: 1fr;
+  }
+  /* Counter section */
+  .counter .container {
+    grid-template-columns: 1fr;
+    grid-row-gap: 50px;
   }
 }
