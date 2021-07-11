@@ -803,6 +803,11 @@ footer div a {
     padding: 5px 10px;
     margin-bottom: 8px;
   }
+
+  /* Courses section */
+  .courses-content {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 768px) {
   .categories-content {
@@ -812,5 +817,13 @@ footer div a {
   .counter .container {
     grid-template-columns: 1fr;
     grid-row-gap: 50px;
+  }
+  /* Courses section */
+  .courses .course {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .courses .course > a {
+    height: 270px;
   }
 }
