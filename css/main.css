@@ -762,6 +762,16 @@ footer div a {
   .counter .container div {
     margin: 0;
   }
+
+  /* Blog & Events section */
+  .blog-events .events {
+    flex-direction: column;
+    align-items: center;
+  }
+  .events .event {
+    padding: 0 !important;
+    margin-bottom: 50px;
+  }
 }
 @media (max-width: 900px) {
   /* Header */
@@ -825,5 +835,13 @@ footer div a {
   }
   .courses .course > a {
     height: 270px;
+  }
+  /* Blog & Events section */
+  .events .event {
+    flex-direction: column;
+    text-align: center;
+  }
+  .events .event .day span {
+    margin-bottom: 20px;
   }
 }
