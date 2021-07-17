@@ -545,7 +545,7 @@ header .flex-container {
   text-align: center;
 }
 .plan {
-  width: 370px;
+  width: 360px;
   background: #fff;
 }
 .plan h4 {
@@ -756,6 +756,17 @@ footer div a {
     grid-template-rows: 240px auto;
     padding: 0 10px;
   }
+  /* Plans section */
+  .plans .plans-content {
+    justify-content: center;
+  }
+  .plans .plan {
+    width: 292px;
+    margin: 0 10px;
+  }
+  .plan .btn-transparent {
+    padding: 16px 45px;
+  }
 }
 @media (max-width: 1120px) {
   .categories-content {
@@ -791,6 +802,19 @@ footer div a {
     grid-template-rows: 270px auto;
     padding: 0;
     margin-bottom: 30px;
+  }
+
+  /* Plans section */
+  .plans .plans-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .plans .plan {
+    width: 360px;
+    margin-bottom: 30px;
+  }
+  .plan .btn-transparent {
+    padding: 16px 75px;
   }
 }
 @media (max-width: 900px) {
