@@ -891,4 +891,29 @@ footer div a {
   .events .event .day span {
     margin-bottom: 20px;
   }
+  /* Day counter section */
+  .day-counter h3 {
+    font-size: 25px;
+  }
+  .day-counter .name {
+    font-size: 20px;
+  }
+  .day-counter .flex-container div {
+    width: 100px;
+    height: 100px;
+  }
+  .day-counter .flex-container div span {
+    font-size: 32px;
+  }
+}
+@media (max-width: 500px) {
+  /* Day counter section */
+  .day-counter .flex-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+  }
+  .day-counter .flex-container div {
+    margin: 5px 5px;
+  }
 }
