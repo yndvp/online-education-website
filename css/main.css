@@ -816,6 +816,16 @@ footer div a {
   .plan .btn-transparent {
     padding: 16px 75px;
   }
+
+  /* Gallery section */
+  .gallery .photos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: unset;
+  }
+  .gallery .photos a {
+    height: 300px;
+  }
 }
 @media (max-width: 900px) {
   /* Header */
@@ -904,6 +914,10 @@ footer div a {
   }
   .day-counter .flex-container div span {
     font-size: 32px;
+  }
+  /* Gallery section */
+  .gallery .photos {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 500px) {
