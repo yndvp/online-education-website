@@ -827,6 +827,17 @@ footer div a {
     height: 300px;
   }
 }
+@media (max-width: 1024px) {
+  /* Footer */
+  footer .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  footer .about {
+    grid-column: 1 / span 4;
+    width: unset;
+    margin-bottom: 45px;
+  }
+}
 @media (max-width: 900px) {
   /* Header */
   header .toggleBtn {
@@ -882,6 +893,7 @@ footer div a {
     grid-template-columns: 1fr;
     grid-row-gap: 50px;
   }
+
   /* Courses section */
   .courses .course {
     display: grid;
@@ -890,6 +902,7 @@ footer div a {
   .courses .course > a {
     height: 270px;
   }
+
   /* Blog & Events section */
   .blog-events .events {
     margin-bottom: 45px;
@@ -901,6 +914,7 @@ footer div a {
   .events .event .day span {
     margin-bottom: 20px;
   }
+
   /* Day counter section */
   .day-counter h3 {
     font-size: 25px;
@@ -915,9 +929,25 @@ footer div a {
   .day-counter .flex-container div span {
     font-size: 32px;
   }
+
   /* Gallery section */
   .gallery .photos {
     grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  footer .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer .about {
+    grid-column: 1 / span 2;
+  }
+  footer .container div {
+    margin-bottom: 45px;
+  }
+  footer .container div:nth-child(4),
+  footer .container div:nth-child(5) {
+    margin: 0;
   }
 }
 @media (max-width: 500px) {
