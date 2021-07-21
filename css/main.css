@@ -384,6 +384,7 @@ header .flex-container {
 }
 .testimonial {
   width: 33.33%;
+  padding: 0 50px;
   transition: 1.5s;
 }
 .testimonial span {
@@ -399,7 +400,7 @@ header .flex-container {
   height: 100%;
 }
 .testimonial .writer {
-  font-size: 14;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -959,5 +960,29 @@ footer div a {
   }
   .day-counter .flex-container div {
     margin: 5px 5px;
+  }
+
+  /* Testimonials section */
+  .testimonials h3 {
+    font-size: 20px;
+  }
+  .testimonials h3 span::before {
+    top: 13px;
+    left: -48px;
+    width: 35px;
+  }
+  .testimonials h3 span::after {
+    top: 13px;
+    right: -48px;
+    width: 35px;
+  }
+  .testimonial .writer {
+    font-size: 12px;
+  }
+  .testimonial .status {
+    font-size: 9px;
+  }
+  .testimonial .quote {
+    font-size: 14px;
   }
 }
