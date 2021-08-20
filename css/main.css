@@ -756,8 +756,11 @@ footer div a {
 }
 
 /* Toggle */
-.active {
+.flex-container.active {
   display: block;
+}
+.flex-container.hidden {
+  display: none;
 }
 
 /* Responsive */
@@ -860,9 +863,10 @@ footer div a {
   /* Header */
   header .toggleBtn {
     display: block;
+    font-size: 20px;
   }
   header .flex-container {
-    display: block;
+    display: none;
     position: absolute;
     top: 0;
     right: 0;

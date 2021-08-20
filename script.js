@@ -1,9 +1,11 @@
-// Slider variables
+// DOM elements
 const sliderNavs = document.querySelectorAll('.slider .navigation-btn');
 const sliderNav1 = document.querySelector('.slider .navigation-btn.btn1');
 const sliderNav2 = document.querySelector('.slider .navigation-btn.btn2');
 const sliderNav3 = document.querySelector('.slider .navigation-btn.btn3');
 const sliderFirst = document.querySelector('.slider .slide1');
+const toggleBtn = document.querySelector('header .toggleBtn');
+const mainMenu = document.querySelector('header .flex-container');
 
 // Remove active class
 const removeActive = function () {
@@ -94,4 +96,10 @@ blogMenu.addEventListener('click', function (e) {
 pricingMenu.addEventListener('click', function (e) {
   e.preventDefault();
   pricingSec.scrollIntoView({ behavior: 'smooth' });
+});
+
+// Toggle header menu
+toggleBtn.addEventListener('click', function () {
+  toggleBtn.classList.toggle('hidden');
+  mainMenu.classList.toggle('active');
 });
