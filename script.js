@@ -6,6 +6,7 @@ const sliderNav3 = document.querySelector('.slider .navigation-btn.btn3');
 const sliderFirst = document.querySelector('.slider .slide1');
 const toggleBtn = document.querySelector('header .toggleBtn');
 const mainMenu = document.querySelector('header .flex-container');
+const closeBtn = document.querySelector('header .closeBtn');
 
 // Remove active class
 const removeActive = function () {
@@ -100,6 +101,10 @@ pricingMenu.addEventListener('click', function (e) {
 
 // Toggle header menu
 toggleBtn.addEventListener('click', function () {
-  toggleBtn.classList.toggle('hidden');
-  mainMenu.classList.toggle('active');
+  toggleBtn.classList.add('hidden');
+  mainMenu.classList.add('active');
+});
+closeBtn.addEventListener('click', function () {
+  toggleBtn.classList.remove('hidden');
+  mainMenu.classList.remove('active');
 });

@@ -117,6 +117,9 @@ header .flex-container {
 .toggleBtn {
   display: none;
 }
+.closeBtn {
+  display: none;
+}
 
 /* Slider */
 .slider {
@@ -899,6 +902,18 @@ footer div a {
   header .flex-container .btn-container a {
     padding: 5px 10px;
     margin-bottom: 8px;
+  }
+  header .closeBtn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #fff;
+    font-size: 22px;
+    background: none;
+    border: none;
+    z-index: 10;
+    cursor: pointer;
   }
 
   /* Courses section */
