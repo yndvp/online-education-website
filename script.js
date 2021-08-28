@@ -1,4 +1,5 @@
-// DOM elements
+///////////////////////////////////////
+// Variables
 const sliderNavs = document.querySelectorAll('.slider .navigation-btn');
 const sliderNav1 = document.querySelector('.slider .navigation-btn.btn1');
 const sliderNav2 = document.querySelector('.slider .navigation-btn.btn2');
@@ -8,6 +9,8 @@ const toggleBtn = document.querySelector('header .toggleBtn');
 const mainMenu = document.querySelector('header .flex-container');
 const closeBtn = document.querySelector('header .closeBtn');
 
+///////////////////////////////////////
+// Slider
 // Remove active class
 const removeActive = function () {
   sliderNavs.forEach(function (el) {
@@ -51,32 +54,58 @@ sliderNavs.forEach(function (navigator) {
   });
 });
 
-// Testimonials variables
-const testimonialNavs = document.querySelectorAll(
-  '.testimonials .navigation-btn'
-);
-const testimonialFirst = document.querySelector('.testimonials .first');
+///////////////////////////////////////
+// Testimonials
+const testimonial = function () {
+  const testimonials = document.querySelectorAll('.testimonial');
+  const navsContainer = document.querySelector('.testimonials .navigation');
 
-// Testimonials manual player
-testimonialNavs[0].addEventListener('click', function () {
-  testimonialFirst.style.marginLeft = '0%';
-});
-testimonialNavs[1].addEventListener('click', function () {
-  testimonialFirst.style.marginLeft = '-33.33%';
-});
-testimonialNavs[2].addEventListener('click', function () {
-  testimonialFirst.style.marginLeft = '-66.66%';
-});
+  let curSlide = 0;
 
-// Activate testimonials navigators
-testimonialNavs.forEach(function (el) {
-  el.addEventListener('click', function () {
-    testimonialNavs.forEach(function (el2) {
-      el2.classList.remove('active');
+  // Functions
+  const createNavs = function (slide) {
+    testimonials.forEach((_, i) => {
+      navsContainer.insertAdjacentHTML(
+        'beforeend',
+        `<div class="navigation-btn" data-slide="${i}"></div>`
+      );
     });
-    el.classList.add('active');
+  };
+
+  const activateNavs = function (slide) {
+    document
+      .querySelectorAll('.testimonials .navigation-btn')
+      .forEach((nav) => nav.classList.remove('active'));
+    document
+      .querySelector(`.testimonials .navigation-btn[data-slide="${slide}"]`)
+      .classList.add('active');
+  };
+
+  const goToSlide = function (slide) {
+    testimonials.forEach(
+      (t, i) => (t.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  };
+
+  // Event handler
+  navsContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains('navigation-btn')) {
+      const { slide } = e.target.dataset;
+      activateNavs(slide);
+      goToSlide(slide);
+      curSlide = slide;
+    }
   });
-});
+
+  const init = function () {
+    createNavs();
+    activateNavs(0);
+    goToSlide(0);
+  };
+  init();
+};
+
+testimonial();
 
 // Scrolling Variables
 const coursesMenu = document.querySelector('#courses');
