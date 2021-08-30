@@ -1,8 +1,32 @@
+'use strict';
+
 ///////////////////////////////////////
 // Variables
-const toggleBtn = document.querySelector('header .toggleBtn');
 const mainMenu = document.querySelector('header .flex-container');
+const openBtn = document.querySelector('header .openBtn');
 const closeBtn = document.querySelector('header .closeBtn');
+
+///////////////////////////////////////
+// Toggle menu
+openBtn.addEventListener('click', function () {
+  openBtn.classList.add('hidden');
+  mainMenu.classList.add('active');
+});
+closeBtn.addEventListener('click', function () {
+  openBtn.classList.remove('hidden');
+  mainMenu.classList.remove('active');
+});
+
+///////////////////////////////////////
+// Page navigation
+mainMenu.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains('nav-link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});
 
 ///////////////////////////////////////
 // Slider
@@ -123,34 +147,3 @@ const testimonial = function () {
 };
 
 testimonial();
-
-// Scrolling Variables
-const coursesMenu = document.querySelector('#courses');
-const blogMenu = document.querySelector('#blog');
-const pricingMenu = document.querySelector('#pricing');
-const coursesSec = document.querySelector('.courses');
-const blogSec = document.querySelector('.blog-events');
-const pricingSec = document.querySelector('.plans');
-
-coursesMenu.addEventListener('click', function (e) {
-  e.preventDefault();
-  coursesSec.scrollIntoView({ behavior: 'smooth' });
-});
-blogMenu.addEventListener('click', function (e) {
-  e.preventDefault();
-  blogSec.scrollIntoView({ behavior: 'smooth' });
-});
-pricingMenu.addEventListener('click', function (e) {
-  e.preventDefault();
-  pricingSec.scrollIntoView({ behavior: 'smooth' });
-});
-
-// Toggle header menu
-toggleBtn.addEventListener('click', function () {
-  toggleBtn.classList.add('hidden');
-  mainMenu.classList.add('active');
-});
-closeBtn.addEventListener('click', function () {
-  toggleBtn.classList.remove('hidden');
-  mainMenu.classList.remove('active');
-});

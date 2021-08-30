@@ -29,13 +29,18 @@
   background: rgba(0, 0, 0, 0.8);
 }
 
+.section--hidden {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
 .intro {
   text-align: center;
   margin-bottom: 95px;
 }
 .intro h3 {
   position: relative;
-  font-family: "Roboto Slab", serif;
+  font-family: 'Roboto Slab', serif;
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 20px;
@@ -43,7 +48,7 @@
   text-transform: uppercase;
 }
 .intro h3::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 40px;
   right: 0;
