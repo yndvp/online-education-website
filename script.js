@@ -21,7 +21,7 @@ closeBtn.addEventListener('click', function () {
 ///////////////////////////////////////
 // Page navigation
 mainMenu.addEventListener('click', function (e) {
-  e.preventDefault();
+  // e.preventDefault();
 
   if (e.target.classList.contains('nav-link')) {
     const id = e.target.getAttribute('href');
