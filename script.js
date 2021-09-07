@@ -1,33 +1,38 @@
 'use strict';
 
 ///////////////////////////////////////
-// Variables
-const mainMenu = document.querySelector('header .flex-container');
-const openBtn = document.querySelector('header .openBtn');
-const closeBtn = document.querySelector('header .closeBtn');
-const allSections = document.querySelectorAll('section');
-
-///////////////////////////////////////
 // Toggle menu
-openBtn.addEventListener('click', function () {
-  openBtn.classList.add('hidden');
-  mainMenu.classList.add('active');
-});
-closeBtn.addEventListener('click', function () {
-  openBtn.classList.remove('hidden');
-  mainMenu.classList.remove('active');
-});
+const toggleMenu = function () {
+  const mainMenu = document.querySelector('header .flex-container');
+  const openBtn = document.querySelector('header .openBtn');
+  const closeBtn = document.querySelector('header .closeBtn');
+
+  openBtn.addEventListener('click', function () {
+    openBtn.classList.add('hidden');
+    mainMenu.classList.add('active');
+  });
+  closeBtn.addEventListener('click', function () {
+    openBtn.classList.remove('hidden');
+    mainMenu.classList.remove('active');
+  });
+};
+toggleMenu();
 
 ///////////////////////////////////////
 // Page navigation
-mainMenu.addEventListener('click', function (e) {
-  // e.preventDefault();
+const navigatePage = function () {
+  const mainMenu = document.querySelector('header .flex-container');
 
-  if (e.target.classList.contains('nav-link')) {
-    const id = e.target.getAttribute('href');
-    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-  }
-});
+  mainMenu.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    if (e.target.classList.contains('nav-link')) {
+      const id = e.target.getAttribute('href');
+      document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+};
+navigatePage();
 
 ///////////////////////////////////////
 // Slider
@@ -151,20 +156,25 @@ testimonial();
 
 ///////////////////////////////////////
 // Revealing sections on scroll
-const revealSection = function (entries, observer) {
-  const [entry] = entries;
-  if (!entry.isIntersecting) return;
-  entry.target.classList.remove('section--hidden');
+const revealOnScroll = function () {
+  const allSections = document.querySelectorAll('section');
 
-  observer.unobserve(entry.target);
+  const revealSection = function (entries, observer) {
+    const [entry] = entries;
+    if (!entry.isIntersecting) return;
+    entry.target.classList.remove('section--hidden');
+
+    observer.unobserve(entry.target);
+  };
+
+  const sectionObserver = new IntersectionObserver(revealSection, {
+    root: null,
+    threshold: 0.15,
+  });
+
+  allSections.forEach((sec) => {
+    sectionObserver.observe(sec);
+    sec.classList.add('section--hidden');
+  });
 };
-
-const sectionObserver = new IntersectionObserver(revealSection, {
-  root: null,
-  threshold: 0.15,
-});
-
-allSections.forEach((sec) => {
-  sectionObserver.observe(sec);
-  sec.classList.add('section--hidden');
-});
+revealOnScroll();
