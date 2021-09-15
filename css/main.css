@@ -749,10 +749,11 @@ header .flex-container {
   font-weight: 400;
   margin-bottom: 20px;
 }
-
-.contact__icon,
-.contact__text {
-  display: inline-block;
+.contact__info li {
+  display: flex;
+}
+.contact__icon {
+  margin-right: 5px;
 }
 .contact__form form > input,
 .contact__form form textarea {
