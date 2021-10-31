@@ -1,19 +1,26 @@
 'use strict';
 
+const mainMenu = document.querySelector('header .flex-container');
+
 ///////////////////////////////////////
 // Toggle menu
 const toggleMenu = function () {
-  const mainMenu = document.querySelector('header .flex-container');
   const openBtn = document.querySelector('header .openBtn');
   const closeBtn = document.querySelector('header .closeBtn');
+  const body = document.querySelector('body');
+  const shadeContainer = document.querySelector('.shade-container');
 
   openBtn.addEventListener('click', function () {
     openBtn.classList.add('hidden');
     mainMenu.classList.add('active');
+    body.classList.add('freeze');
+    shadeContainer.classList.add('shade');
   });
   closeBtn.addEventListener('click', function () {
     openBtn.classList.remove('hidden');
     mainMenu.classList.remove('active');
+    body.classList.remove('freeze');
+    shadeContainer.classList.remove('shade');
   });
 };
 toggleMenu();
@@ -21,8 +28,6 @@ toggleMenu();
 ///////////////////////////////////////
 // Page navigation
 const navigatePage = function () {
-  const mainMenu = document.querySelector('header .flex-container');
-
   mainMenu.addEventListener('click', function (e) {
     e.preventDefault();
 
