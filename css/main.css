@@ -46,7 +46,7 @@ a {
 }
 .contact .phone {
   color: rgba(0, 0, 0, 0.6);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
   border-left: 1px solid rgba(0, 0, 0, 0.08);
   border-right: 1px solid rgba(0, 0, 0, 0.08);
@@ -1036,6 +1036,36 @@ footer div a {
   }
 }
 @media (max-width: 500px) {
+  /* Top banner */
+  .top .container {
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
+  .top .container * {
+    border: none;
+  }
+  .top .contact {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .top .domain {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .top .contact > * {
+    width: 100%;
+  }
+  .top .phone {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .top .social ul {
+    display: flex;
+    justify-content: center;
+  }
+
   /* Slider section */
   .slide .content h2 {
     font-size: 32px;
@@ -1073,5 +1103,13 @@ footer div a {
   }
   .testimonial .quote {
     font-size: 14px;
+  }
+
+  /* Plans section */
+  .plans .plan {
+    width: 80%;
+  }
+  .plan .btn-transparent {
+    padding: 5% 20%;
   }
 }
