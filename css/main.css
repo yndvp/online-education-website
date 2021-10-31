@@ -898,7 +898,7 @@ footer div a {
     right: 0;
     width: 280px;
     height: 100vh;
-    background: rgba(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8);
     padding: 60px 30px;
     z-index: 150;
   }
@@ -1064,6 +1064,45 @@ footer div a {
   .top .social ul {
     display: flex;
     justify-content: center;
+  }
+
+  /* Header */
+  header .flex-container {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 60px 30px;
+    z-index: 150;
+    text-align: center;
+  }
+  header .flex-container > .menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  header .flex-container > .btn-container {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  header .flex-container * {
+    font-size: 16px !important;
+  }
+  header .flex-container .btn-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+  header .flex-container .btn-container a {
+    margin: 0 5px;
+  }
+  header .closeBtn {
+    font-size: 28px;
+    top: 25px;
+    right: 30px;
   }
 
   /* Slider section */
