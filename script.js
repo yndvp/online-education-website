@@ -87,7 +87,7 @@ const slider = function () {
     }
   });
 
-  Auto player
+  // Auto player
   const autoPlay = setInterval(function () {
     if (curSlide >= maxSlide) {
       curSlide = 0;
