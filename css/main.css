@@ -138,8 +138,7 @@ header .flex-container {
   align-items: center;
 }
 .slide .content {
-  max-width: 100%;
-  min-width: 750px;
+  max-width: 80%;
   color: #fff;
   text-align: center;
 }
@@ -815,14 +814,12 @@ footer div a {
   }
 }
 @media (max-width: 1120px) {
-  /* Slider section */
-  .slide .content h2 {
-    font-size: 25px;
-  }
+  /* Categories section */
   .categories-content {
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
   }
+
   /* Counter section */
   .counter .container {
     display: grid;
@@ -1039,6 +1036,11 @@ footer div a {
   }
 }
 @media (max-width: 500px) {
+  /* Slider section */
+  .slide .content h2 {
+    font-size: 32px;
+  }
+
   /* Day counter section */
   .day-counter .flex-container {
     display: grid;
