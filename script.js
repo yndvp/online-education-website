@@ -1,43 +1,74 @@
 'use strict';
 
+///////////////////////////////////////
+// Variables
+const menuLinksBox = document.querySelector('header .menu');
+const menuLinks = document.querySelectorAll('header .menu li');
+const header = document.querySelector('header');
+const sliderSec = document.querySelector('.slider');
+const openBtn = document.querySelector('header .openBtn');
+const closeBtn = document.querySelector('header .closeBtn');
+const body = document.querySelector('body');
+const shadeContainer = document.querySelector('.shade-container');
 const mainMenu = document.querySelector('header .flex-container');
 
 ///////////////////////////////////////
-// Toggle menu
-const toggleMenu = function () {
-  const openBtn = document.querySelector('header .openBtn');
-  const closeBtn = document.querySelector('header .closeBtn');
-  const body = document.querySelector('body');
-  const shadeContainer = document.querySelector('.shade-container');
+// Sticky navigation
+const headerHeight = header.getBoundingClientRect().height;
 
-  openBtn.addEventListener('click', function () {
-    openBtn.classList.add('hidden');
-    mainMenu.classList.add('active');
-    body.classList.add('freeze');
-    shadeContainer.classList.add('shade');
-  });
-  closeBtn.addEventListener('click', function () {
-    openBtn.classList.remove('hidden');
-    mainMenu.classList.remove('active');
-    body.classList.remove('freeze');
-    shadeContainer.classList.remove('shade');
-  });
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) header.classList.add('sticky');
+  else header.classList.remove('sticky');
 };
-toggleMenu();
+
+const topObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${headerHeight}px`,
+});
+topObserver.observe(sliderSec);
+
+///////////////////////////////////////
+// Toggle menu
+
+// Open menu function
+const openMenu = function () {
+  openBtn.classList.add('hidden');
+  mainMenu.classList.add('active');
+  closeBtn.classList.add('active');
+  shadeContainer.classList.add('shade');
+};
+// Close menu function
+const closeMenu = function () {
+  openBtn.classList.remove('hidden');
+  mainMenu.classList.remove('active');
+  closeBtn.classList.remove('active');
+  shadeContainer.classList.remove('shade');
+};
+// Add event handler
+openBtn.addEventListener('click', openMenu);
+closeBtn.addEventListener('click', closeMenu);
+mainMenu.addEventListener('click', closeMenu);
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeMenu();
+  }
+});
 
 ///////////////////////////////////////
 // Page navigation
-const navigatePage = function () {
-  mainMenu.addEventListener('click', function (e) {
-    e.preventDefault();
+menuLinksBox.addEventListener('click', function (e) {
+  e.preventDefault();
 
-    if (e.target.classList.contains('nav-link')) {
-      const id = e.target.getAttribute('href');
-      document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-};
-navigatePage();
+  if (e.target.classList.contains('nav-link')) {
+    console.log(e.target);
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
+});
 
 ///////////////////////////////////////
 // Slider
