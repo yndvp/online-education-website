@@ -276,6 +276,9 @@ header .flex-container {
   color: #fff;
   font-family: 'Roboto Slab', serif;
 }
+.counter .container * {
+  z-index: 0;
+}
 .counter .container div {
   margin: 0 55px;
   z-index: 999;
@@ -948,7 +951,7 @@ footer div a {
   }
   header .closeBtn.active {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 15px;
     right: 20px;
     color: #fff;

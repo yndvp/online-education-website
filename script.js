@@ -40,6 +40,7 @@ const openMenu = function (e) {
   mainMenu.classList.add('active');
   closeBtn.classList.add('active');
   shadeContainer.classList.add('shade');
+  header.classList.remove('sticky');
 };
 // Close menu function
 const closeMenu = function (e) {
@@ -49,6 +50,7 @@ const closeMenu = function (e) {
   mainMenu.classList.remove('active');
   closeBtn.classList.remove('active');
   shadeContainer.classList.remove('shade');
+  header.classList.add('sticky');
 };
 // Add event handler
 openBtn.addEventListener('click', openMenu);
