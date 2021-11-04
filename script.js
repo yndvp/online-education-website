@@ -33,14 +33,18 @@ topObserver.observe(sliderSec);
 // Toggle menu
 
 // Open menu function
-const openMenu = function () {
+const openMenu = function (e) {
+  e.preventDefault();
+
   openBtn.classList.add('hidden');
   mainMenu.classList.add('active');
   closeBtn.classList.add('active');
   shadeContainer.classList.add('shade');
 };
 // Close menu function
-const closeMenu = function () {
+const closeMenu = function (e) {
+  e.preventDefault();
+
   openBtn.classList.remove('hidden');
   mainMenu.classList.remove('active');
   closeBtn.classList.remove('active');
@@ -69,6 +73,12 @@ menuLinksBox.addEventListener('click', function (e) {
     });
   }
 });
+
+///////////////////////////////////////
+// Day counter
+const countdown = function () {
+  const countDate = new Date();
+};
 
 ///////////////////////////////////////
 // Slider

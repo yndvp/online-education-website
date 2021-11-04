@@ -919,6 +919,9 @@ footer div a {
     padding: 60px 30px;
     z-index: 150;
   }
+  header .flex-container * {
+    z-index: 160;
+  }
   header .flex-container a {
     color: #fff !important;
   }
