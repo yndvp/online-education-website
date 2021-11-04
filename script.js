@@ -77,8 +77,26 @@ menuLinksBox.addEventListener('click', function (e) {
 ///////////////////////////////////////
 // Day counter
 const countdown = function () {
-  const countDate = new Date();
+  const countDate = new Date('November 10, 2021 00:00:00').getTime();
+  const now = new Date().getTime();
+  const gap = countDate - now;
+
+  const second = 1000;
+  const minute = second * 60;
+  const hour = minute * 60;
+  const day = hour * 24;
+
+  const countDay = Math.floor(gap / day);
+  const countHour = Math.floor((gap % day) / hour);
+  const countMinute = Math.floor((gap % hour) / minute);
+  const countSecond = Math.floor((gap % minute) / second);
+
+  document.querySelector('.days').innerHTML = countDay;
+  document.querySelector('.hours').innerHTML = countHour;
+  document.querySelector('.minutes').innerHTML = countMinute;
+  document.querySelector('.seconds').innerHTML = countSecond;
 };
+setInterval(countdown, 1000);
 
 ///////////////////////////////////////
 // Slider
