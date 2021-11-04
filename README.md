@@ -14,6 +14,7 @@ Online class platform that student can register for the courses and the teacher 
 - **Slider**
 - **Menu bar toggling**
 - **Sticky navigation bar**
+- **Date countdown**
 
 ## Screenshot
 ![](screencapture-online-education-website.png)
