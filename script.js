@@ -79,7 +79,7 @@ menuLinksBox.addEventListener('click', function (e) {
 ///////////////////////////////////////
 // Day counter
 const countdown = function () {
-  const countDate = new Date('November 10, 2021 00:00:00').getTime();
+  const countDate = new Date('November 20, 2021 00:00:00').getTime();
   const now = new Date().getTime();
   const gap = countDate - now;
 
