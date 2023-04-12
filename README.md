@@ -10,11 +10,11 @@ Online class platform that student can register for the courses and the teacher 
 
 ## Features
 - **Page Navigation**
-- **Revealing sections on scroll**
+- **Revealing Sections on Scroll**
 - **Slider**
-- **Menu bar toggling**
-- **Sticky navigation bar**
-- **Date countdown**
+- **Menubar Toggling**
+- **Sticky Navigation Bar**
+- **Date Countdown**
 
 ## Screenshot
 ![](screencapture-online-education-website.png)
