@@ -79,7 +79,7 @@ menuLinksBox.addEventListener('click', function (e) {
 ///////////////////////////////////////
 // Day counter
 const countdown = function () {
-  const countDate = new Date('May 30, 2023 00:00:00').getTime();
+  const countDate = new Date('Sep 30, 2023 00:00:00').getTime();
   const now = new Date().getTime();
   const gap = countDate - now;
 
